@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Animation | AnimeJS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2><span>승운 애니메이션 페이지 만들기</span><br>AnimeJs 이용</h2>
+  </div>
+
+  <script src="anime.js"></script>
+  <script>
+    const container = document.querySelector('.container')
+    for ( var i = 0; i<=100; i++){
+      const blocks = document.createElement("div");
+      blocks.classList.add('block');
+      container.appendChild(blocks)
+    }
+
+    function animateBlocks(){
+      anime({
+        targets : '.block',
+        translateX: function(){
+          return anime.random(-700,700)
+        },
+        translateY: function(){
+          return anime.random(-500,500)
+        },
+        scale: function(){
+          return anime.random(1,5)
+        },
+        easing: 'linear', // 움직임 선형
+        duration: 3000, // 3초동안 움직임
+        delay : anime.stagger(10), //딜레이 10ms씩 계속 늘리기
+        complete : animateBlocks, //끝나면 다시 실행되게
+      })
+    }
+
+    animateBlocks()
+  </script>
+</body>
+</html>
