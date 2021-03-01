@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날아다니는 글씨</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <section>
+    <p class="text">
+      <!-- Lorem200 -->
+      어렸을 때 부터 하나의 문제를 다양한 방식으로 풀어낼 수 있는 수학이라는 과목이 재미있어 대학도 수학과로 진학을 하게 되었습니다. 대학에 와서의 수학은 재미는 있었지만, 고등학교까지 해왔던 바로바로 채점이되고 점수가 매겨지는 수학과는 달리, 중간고사를 보고도 학기가 끝날 때야 점수가 나오곤 해서 흥미가 많이줄어, 피드백이 확실한 게임에 빠지게 되었습니다. 하스스톤이라는 게임에서 프로게이머를 위해 랭커로써 활동했으나, 게임사의 마음으로 대회가 사라지는 것을 보고 프로게이머의 꿈을 접고 수학이라는 학문을 활용하면서, 피드백이 빨리 되고 결과를 만들어낼 수 있는 분야를 찾다가 프로그래밍을 접하게 되었습니다.
+
+      프로그래밍을 효율적으로 배우기 위해 졸업을 하고 바로 한국소프트웨어인재개발원에 들어가 JAVA개발자 양성과정 코스를 7개월간 수강하였습니다. 수강을 할 때 교육의 효율성을 높이기 위해 학원 앞 고시방에서 7개월간 생활을 하였고, 그 결과 반 1등 및 최종 프로젝트 최우수상이라는 상을 거머쥘 수 있었습니다. 위에 쓴 프로게이머나 이 경험에서 볼 수 있듯이 무언가 하나에 꽂히면 적어도 제가 있는 곳에서는 최고로 손꼽힐 수 있는 사람이 됩니다.
+    </p>
+  </section>
+
+  <script src="./anime.js"></script>
+  <script>
+    // 글자쪼개기
+    const text = document.querySelector('.text');
+    // 정규표현식: /정규식/g 로 표현
+    // \S : 공백 문자가 아닌 하나의 문자에 대응
+    // $& : 일치한 문자열
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+  
+    const animation= anime.timeline({
+      targets : '.text span',
+      easing : 'easeInOutExpo',
+      loop: true
+    });
+
+    animation
+      .add({
+        rotate: function(){
+          return anime.random(-360, 360)
+        },
+        translateX: function(){
+          return anime.random(-500,500)
+        },
+        translateY: function(){
+          return anime.random(-500,500)
+        },
+        duration : 3000,
+        delay: anime.stagger(20),
+      })
+
+      .add({
+        rotate: 0,
+        translateX:0,
+        translateY: 0,
+        duration : 3000,
+        delay: anime.stagger(20),
+      })
+  </script>
+
+</body>
+</html>
