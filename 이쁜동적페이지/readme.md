@@ -123,4 +123,4 @@
 
 # 완성작품
 
-![동적인 페이지](readme.assets/동적인 페이지.gif)
+![동적인 페이지](readme.assets/동적인페이지.gif)

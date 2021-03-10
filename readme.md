@@ -34,4 +34,4 @@
 >
 > @media (max-width: 991px)로 화면크기가 작아졌을때 글씨 깨짐을 방지처리 및 메뉴 토글
 
-![동적인 페이지](readme.assets/동적인 페이지.gif)
+![동적인 페이지](readme.assets/동적인페이지.gif)
