@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="bg.jpg" class="banner">
+    <a href="#" class="logo">한 승운</a>
+    <div class="toggle"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Protfolio</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>글 제목 붙이기</h2>
+    <p>
+      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad beatae ea eaque earum eius error expedita harum illum in molestiae molestias nobis nostrum perspiciatis quae quas, quis sed, voluptates!</span><span>Ad aut culpa cupiditate debitis dicta ea eos ipsum laboriosam laudantium minus ratione repellendus reprehenderit, rerum, sint tempore vero, voluptatem? Atque doloribus harum molestias. Accusantium dolorum eius minus numquam voluptatem!</span><span>Adipisci blanditiis, eaque laboriosam magnam non officiis praesentium quisquam quod, sequi tempore veniam vitae, voluptate! A beatae culpa explicabo ipsa ipsam iure libero officiis porro quasi sequi. Labore, velit vero.</span><span>Accusamus adipisci dicta eligendi fuga illo, illum inventore maxime officiis optio quam quasi quia reiciendis, repellat repellendus repudiandae voluptatem voluptatibus? Culpa facere fugiat laborum laudantium nostrum perferendis quae temporibus, veniam.</span><span>Est facilis necessitatibus rem voluptatibus. Mollitia odio placeat quibusdam? Accusamus autem dolore, doloremque dolores doloribus enim eum itaque magni minima minus natus odio omnis possimus quasi quo unde voluptate? Quos.</span><span>Aperiam architecto ex excepturi facilis, minus nihil nisi nulla obcaecati omnis porro quae quia quibusdam, recusandae repellendus rerum, sapiente unde! Amet facilis laudantium modi nemo nisi perferendis quos recusandae temporibus.</span><span>Adipisci id libero repudiandae sit vitae! Maiores molestiae nemo neque? Alias, aperiam cum enim fugit in, incidunt inventore laudantium, nobis perspiciatis porro possimus ratione repudiandae sapiente sequi soluta suscipit veritatis.</span><span>Enim, eos fugit iure iusto libero molestias qui repudiandae sunt temporibus vitae? Ad animi dolores, eligendi est expedita ipsa laboriosam nihil, odit, qui reiciendis tempore velit. Eligendi modi non quis!</span><span>Aperiam dicta fuga nam nihil ratione. Accusamus adipisci cumque debitis dolorum ea earum est, fugiat ipsam itaque libero maxime minus modi nemo placeat provident, quam quisquam sapiente temporibus vel voluptatibus.</span><span>Accusantium assumenda commodi dolores et inventore iusto modi nihil odit pariatur, perspiciatis quibusdam quidem ratione saepe sed sequi sit tempore, ullam voluptas? Ab accusamus autem fugit hic magnam, nesciunt obcaecati?</span>
+    </p>
+  </section>
+
+
+  <script>
+    window.addEventListener("scroll", function(){
+      const header = document.querySelector('header');
+      /* scroll을 하게되면 header 에 sticky 라는 클래스를 붙여줌*/
+      header.classList.toggle('sticky', window.scrollY >0);
+    });
+
+    const navigation = document.querySelector('nav');
+    document.querySelector('.toggle').onclick= function(){
+      this.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
