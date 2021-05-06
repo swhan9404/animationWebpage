@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .col-left {
+  flex: 1;
+}
+
+h1 {
+  color: transparent;
+  font-size: 80px;
+  position: relative;
+  display: inline-block;
+  animation: text_reveal 0.5s ease forwards;
+  /* overlay의 반정도가 적당 , delay_text-reveal = overlat+overlay의 delay*/
+  animation-delay: 1s;
+}
+
+h1 span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height:100%;
+  width: 0;
+  background-color: white;
+  animation: overlay 1s ease forwards;
+  animation-delay: .5s;
+}
+
+
+h1:nth-child(1) {
+  animation-delay: 1s;
+}
+h1:nth-child(2) {
+  animation-delay: 2s;
+}
+h1:nth-child(3) {
+  animation-delay: 3s;
+}
+
+h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+.container .col-right {
+  flex: 1;
+}
+
+.container .col-right img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes overlay {
+  50%{
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
