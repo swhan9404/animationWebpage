@@ -1,0 +1,46 @@
+*
+{
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+}
+
+body {
+  display : flex;
+  justify-content: center;
+  align-items : center;
+  min-height : 100 vh;
+}
+
+.container {
+  display : flex;
+  justify-content: center;
+  align-items : center;
+  flex-wrap : wrap;  /* ? */
+}
+
+.container .box {
+  position : relative;
+  width : 500px;
+  height: 500px;
+  margin : 40px;
+}
+
+.container .box img {
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  object-fit : fill; /* 사진을 가운데에 맞춤 */
+  mix-blend-mode: lighten; /* 검은색은 다른사진, 흰색은 흰색, 다른색은 전경과 배경색을 각각 반전한 후 서로 곱해 나온 값을 반전한 값 */
+}
+
+.container .box video {
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  object-fit : cover;
+}
