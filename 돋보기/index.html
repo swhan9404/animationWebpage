@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class="wrap">
+    <div class="box">
+      <h2>focus</h2>
+    </div>
+    <div class="box">
+      <h2>focus</h2>
+    </div>
+    <div class="circle"></div>
+  </section>
+
+  <script>
+    const html = document.documentElement;       //[1]
+
+    html.addEventListener("mousemove", function(e) {     //[2]
+      html.style.setProperty('--x', e.clientX + 'px');   //[3] [4]
+      html.style.setProperty('--y', e.clientY + 'px');
+    })
+
+    window.addEventListener("load", function(){
+      html.style.setProperty('--x', 0);
+      html.style.setProperty('--y', 0);
+    });
+  </script>
+</body>
+</html>
