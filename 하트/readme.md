@@ -47,3 +47,8 @@
 
 ![img](readme.assets/img.png)
 
+
+
+# 3. 작동영상
+
+![하트](readme.assets/하트.gif)
