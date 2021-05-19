@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Love React Animation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="heart-btn">
+      <div class="content">
+        <span class="heart"></span>
+        <span class="text">Like</span>
+        <span class="numb"></span>
+      </div>
+    </div>
+
+    <script>
+      function toggleClass(element, className) { 
+        var check = new RegExp("(\\s|^)" + className + "(\\s|$)"); 
+        if (check.test(element.className)) { 
+          element.className = element.className.replace(check, " ").trim(); 
+        } else { 
+          element.className += " " + className; 
+        } 
+      }
+
+      const content = document.querySelector('.content')
+
+      content.addEventListener('click', function(event){
+        console.log('asdfasf')
+        toggleClass(content, 'heart-active')
+        const text = document.querySelector('.text')
+        const numb = document.querySelector('.numb')
+        const heart = document.querySelector('.heart')
+
+        toggleClass(text, 'heart-active')
+        toggleClass(numb, 'heart-active')
+        toggleClass(heart, 'heart-active')
+      })
+    </script>
+
+  </body>
+</html>
