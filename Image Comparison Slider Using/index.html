@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Comparison Slider</title>
+</head>
+<body>
+  <div class="container">
+    <div class="slide slide1"></div>
+    <div class="slide slide2" id="slide"></div>
+  </div>
+  
+  <div style="height: 1000px;">
+    <h3>window.onmousemove를 사용해 JS 효과주기!</h3>
+  </div>
+
+  <script type="text/javascript">
+    const slide = document.getElementById('slide')
+    window.onmousemove = function(e) {
+      const x = e.clientX;
+      slide.style.left = x + 'px';
+    }
+  </script>
+</body>
+</html>
