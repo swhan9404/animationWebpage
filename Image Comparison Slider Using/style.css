@@ -1,0 +1,46 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container
+{
+  position: relative;
+  width: 100%;
+  height:100vh;
+  overflow: hidden;
+}
+.container .slide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .slide.slide1
+{
+  background: url("https://marketingweek.imgix.net/content/uploads/2015/03/Coke_fours.png?auto=compress,format&q=60&w=980&h=480");
+  background-attachment: fixed;
+  background-position: center;
+  /* background-size: contain; */
+  background-size: cover;
+  /* height: 100%; */
+  /* object-fit: contain; */
+  /* height: 100%; */
+  /* background-size: initial; */
+  /* background-size: unset; */
+}
+.container .slide.slide2
+{
+  background: url("https://i.ytimg.com/vi/YyscxBut3eo/maxresdefault.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  left: 50%;
+  background-size: cover;
+}
+p
+{
+  position: relative;
+}
