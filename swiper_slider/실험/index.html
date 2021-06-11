@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-1.jpg)">
+        <h2>Nike Shoes</h2>
+        <div class="size">
+          <h3>Size: </h3>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+        </div>
+        <div class="color">
+          <h3>Color: </h3>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-2.jpg)">
+        <h2>Nike Shoes</h2>
+        <div class="size">
+          <h3>Size: </h3>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+        </div>
+        <div class="color">
+          <h3>Color: </h3>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-3.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-4.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-5.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-6.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-7.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-8.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-9.jpg)"></div>
+      <div class="swiper-slide contentBx" style="background-image:url(./images/nature-10.jpg)"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 200,
+      modifier: 1,
+      slideShadows : true,
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+    loop : true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+  });
+</script>
+</body>
+</html>
